@@ -1,0 +1,102 @@
+/* General styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #121212; /* Dark background color */
+  color: white; /* White text color for contrast */
+}
+
+.main-container {
+  text-align: center;
+  background-color: #1e1e1e; /* Dark background for the main container */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Darker shadow for the dark theme */
+  width: 300px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ffffff; /* White color for the title */
+}
+
+h2{
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: rgb(218, 213, 213);
+}
+
+/* Board styles */
+.board {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+}
+
+.cell {
+  width: 80px;
+  height: 80px;
+  border: 2px solid #444; /* Darker border for a black theme */
+  background-color: #2e2e2e; /* Dark background for cells */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.cell:hover {
+  background-color: #444; /* Slightly lighter background when hovered */
+}
+
+.cell.X {
+  color: #e74c3c; /* Red color for 'X' */
+}
+
+.cell.O {
+  color: #2ecc71; /* Green color for 'O' */
+}
+
+/* Restart button styles */
+.restart-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #3498db; /* Blue background */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.restart-btn:hover {
+  background-color: #2980b9; /* Darker blue when hovered */
+}
+
+/* Responsive Design */
+@media (max-width: 300px) {
+  .board {
+    width: 100%;
+  }
+
+  .cell {
+    width: 60px;
+    height: 60px;
+    font-size: 28px;
+  }
+}
